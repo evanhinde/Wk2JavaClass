@@ -54,12 +54,6 @@ public class Card {
             getValidFaceNames());
     }
 
-    @Override
-    public String toString()
-    {
-        return faceName + "of" + suit;
-    }
-
     public void setSuit(String suit) {
         if(getValidSuits().contains(suit))
             this.suit = suit;
@@ -67,4 +61,12 @@ public class Card {
             throw new IllegalArgumentException(suit + "must be in the list of" +
                     getValidSuits());
     }
+
+    @Override
+    public String toString()
+    {
+        return faceName + " of " + suit;
+    }
+
+
 }
